@@ -2,15 +2,14 @@
 A   Baby   class and methods that use the Baby class.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and William Makinen.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
     """
     After you have made the Baby class, run this module. If your Baby
     class is correct, the output of the code below should be:
-
         Hello baby McKinley!
         Hello baby Keegan!
         - - - - -
@@ -39,7 +38,7 @@ def main():
 
 
 # ----------------------------------------------------------------------
-# TODO: 2. Implement a class called   Baby   that has a constructor and
+# done: 2. Implement a class called   Baby   that has a constructor and
 #   two methods, as described below.  Your finished Baby class should
 #   cause the code above to display the expected output.  Hint: Your
 #   class will need instance variables that you must figure out.
@@ -90,10 +89,40 @@ def main():
 #
 ########################################################################
 
+class Baby(object):
 
+        def __init__(self, name):
 
+            self.name = name
+            self.time = 0
+            print('Hello baby', self.name)
 
+        def feed_baby(self):
+                print('Thank you for feeding baby', self.name)
 
+        def hour_passes(self):
+            self.time = self.time + 1
+            if self.time == 1:
+                print('Baby', self.name , 'is sleeping.')
+            if self.time == 2:
+                print('Baby', self.name , 'is awake. Time for food.')
+            if self.time == 3:
+                print('Baby', self.name, 'is CRYING uncontrollably!  Feed the Baby!')
+                print('Baby', self.name, 'is CRYING uncontrollably!  Feed the Baby!')
+            if self.time == 5:
+                print('Baby', self.name, 'is sleeping.')
+                print('Baby', self.name, 'is awake. Time for food.')
+                print('Baby', self.name, 'is CRYING uncontrollably!  Feed the Baby!')
+                print('Baby', self.name, 'is CRYING uncontrollably!  Feed the Baby!')
+
+            # mckinley = Baby('McKinley')
+            # keegan = Baby('Keegan')
+            # for k in range(2):
+            #     print('- - - - -')
+            #     keegan.hour_passes()
+            #     mckinley.feed_baby()
+            #     for j in range(4):
+            #         mckinley.hour_passes()
 
 
 # ----------------------------------------------------------------------
